@@ -1,0 +1,414 @@
+/* ===== Reset simple ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #0b1120;   /* fondo oscuro para todo */
+  color: #111827;
+}
+
+/* ===== Contenedor general ===== */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 8px 40px 8px; /* arriba - derecha - abajo - izquierda */
+}
+
+/* ================= HERO PRESENTATION ================= */
+
+.hero-container {
+  width: 100%;
+  padding: 36px 28px;
+  background: linear-gradient(135deg, #111827, #1e293b);
+  border-radius: 22px;
+  margin: 0 auto 24px auto; /* centrado, con espacio solo abajo */
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 28px;
+  color: #f1f5f9;
+  box-shadow: 0 25px 55px rgba(0,0,0,0.35);
+}
+
+/* Left block */
+.hero-title {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0 0 10px;
+  color: #f8fafc;
+}
+
+.hero-subtitle {
+  font-size: 17px;
+  color: #cbd5e1;
+  margin-bottom: 16px;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.hero-badge {
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.hero-description {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 10px;
+  color: #e2e8f0;
+}
+
+/* Right block (info box) */
+.hero-right {
+  display: flex;
+  align-items: center;
+}
+
+.hero-box {
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 20px;
+  border-radius: 18px;
+  color: #f8fafc;
+  width: 100%;
+}
+
+.hero-box-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.hero-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-info-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+/* Responsive hero */
+@media (max-width: 900px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-right {
+    justify-content: center;
+  }
+}
+
+/* ===== Cabecera de fase ===== */
+.phase-header {
+  margin-bottom: 20px;
+  margin-top: 12px;
+}
+
+.phase-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  color: #e5e7eb;
+}
+
+.phase-subtitle {
+  font-size: 15px;
+  color: #9ca3af;
+  margin: 0 0 10px 0;
+}
+
+.phase-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.phase-badge {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* ===== Layout: solo columna principal ===== */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr); /* una sola columna */
+  gap: 0;
+}
+
+/* ===== Tarjetas principales ===== */
+.section-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px 18px;
+  margin-bottom: 10px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+  border: 1px solid #e5e7eb;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.section-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  background: #111827;
+  color: #f9fafb;
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #111827;
+}
+
+.section-subtitle {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.section-body p {
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 4px 0 8px 0;
+  color: #374151;
+}
+
+.section-body ul {
+  margin: 4px 0 4px 0;
+  padding-left: 18px;
+}
+
+.section-body li {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+/* ===== Tabla cronograma ===== */
+.timeline-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5px;
+  margin-top: 6px;
+}
+
+.timeline-table th,
+.timeline-table td {
+  border: 1px solid #e5e7eb;
+  padding: 5px 6px;
+  text-align: center;
+}
+
+.timeline-table th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.timeline-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ===== Detalles ===== */
+.small-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+/* ===== NAV FASES (MENÚ PRINCIPAL) ===== */
+.phases-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.phase-link {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: none;
+  padding: 8px 16px;
+  border-radius: 14px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: 0.18s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.phase-link:hover {
+  background: #334155;
+  color: #f1f5f9;
+  border-color: #475569;
+}
+
+.phase-link.active {
+  background: #f8fafc;
+  color: #0f172a;
+  border-color: #f8fafc;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(255,255,255,0.15);
+}
+/* ===== BLOQUES DE CÓDIGO ===== */
+
+pre {
+  background: #0b1120;        /* fondo negro/azul muy oscuro */
+  color: #e5e7eb;             /* texto clarito */
+  padding: 10px 12px;
+  border-radius: 10px;
+  overflow-x: auto;           /* scroll horizontal si se pasa de ancho */
+  font-size: 12px;
+  margin: 6px 0 10px 0;
+  border: 1px solid #1f2937;
+}
+
+pre code {
+  font-family: "Fira Code", "Consolas", "Source Code Pro",
+               Menlo, Monaco, "Courier New", monospace;
+  background: transparent;    /* que no meta otro fondo raro */
+  color: inherit;
+}
+
+/* Centrar tablas dentro de las secciones */
+.section-body table {
+  margin: 8px auto;
+}
+
+/* Opcional: limitar el ancho para que se vean más elegantes */
+.timeline-table {
+  max-width: 1000px;
+}
+
+.section-body img {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  border-radius: 10px;
+}
+/* ===== Sección 7: Tecnología y herramientas ===== */
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.tech-grid-bottom {
+  margin-top: 14px;
+}
+
+.tech-card {
+  background: #f9fafb;
+  border-radius: 14px;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+}
+
+.tech-card-title {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.tech-card-text {
+  margin: 0 0 8px 0;
+  font-size: 12.5px;
+  color: #4b5563;
+}
+
+.tech-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 12.5px;
+  color: #374151;
+}
+
+.tech-list li {
+  margin-bottom: 4px;
+}
+
+/* Iconos de lenguajes */
+
+.tech-icons-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 6px 0 10px 0;
+}
+
+.tech-icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 52px;
+}
+
+.tech-icon-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.tech-icon-label {
+  margin-top: 4px;
+  font-size: 10px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* Responsive: tarjetas de tecnología en una sola columna en pantallas pequeñas */
+
+@media (max-width: 800px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,0 +1,926 @@
+<html>
+
+<head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.sng {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.def {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+<meta charset="UTF-8">
+<title>Fase 1 – Definición de la Nueva Funcionalidad</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="page">
+
+<!-- NAV FASES -->
+<div class="phases-nav">
+<a href="index.html" class="phase-link active">Definición de la Nueva Funcionalidad</a>
+</div>
+
+<!-- HERO -->
+<div class="hero-container">
+
+<div class="hero-left">
+
+<h1 class="hero-title">Fase 1 – Definición de la Nueva Funcionalidad</h1>
+
+<p class="hero-subtitle">
+Sistema Predictivo de pruebas mediante Machine Learning
+</p>
+
+<div class="hero-badges">
+<span class="hero-badge">Departamento Desarrollo</span>
+<span class="hero-badge">Ciencia de Datos</span>
+<span class="hero-badge">Machine Learning</span>
+</div>
+
+<p class="hero-description">
+Esta fase define el alcance de la nueva funcionalidad aplicada a Vivo Group Pulse.
+El objetivo es analizar los datos históricos almacenados en Pulse_DB y VIVO_RIS
+para comprender el comportamiento de las pruebas médicas realizadas en los
+diferentes centros del grupo.
+
+A partir de este análisis se desarrollarán modelos de Machine Learning capaces
+de estimar el volumen futuro de pruebas médicas por clínica y modalidad.
+Las predicciones se visualizarán mediante gráficos predictivos integrados
+en la plataforma Pulse, facilitando la planificación operativa y la toma
+de decisiones empresariales.
+</p>
+
+</div>
+
+<div class="hero-right">
+
+<div class="hero-box">
+
+<p class="hero-box-title">Información del proyecto</p>
+
+<ul class="hero-info-list">
+<li>👤 Autor: <b>Departamento de Desarrollo</b></li>
+<li>📁 Proyecto: Sistema Predictivo de pruebas</li>
+<li>📅 Fecha: <b>2026</b></li>
+<li>📊 Dataset: <i>Pulse_DB</i></li>
+<li>🏢 Empresa: <b>Vivo Group</b></li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+<!-- Cabecera -->
+<div class="phase-header">
+
+<p class="phase-title">Definición del Proyecto</p>
+
+<p class="phase-subtitle">
+Comprender el negocio, definir el problema y establecer los objetivos del proyecto de datos.
+</p>
+
+<div class="phase-badges">
+<span class="phase-badge">Business understanding</span>
+<span class="phase-badge">Machine Learning</span>
+<span class="phase-badge">Data Analysis</span>
+<span class="phase-badge">CRISP-DM</span>
+</div>
+
+</div>
+
+
+<div class="layout">
+<div>
+
+
+<!-- 1 TITULO -->
+
+<div class="section-card">
+
+<div class="section-header">
+<div class="section-number">1</div>
+
+<div>
+<p class="section-title">Nombre completo del proyecto</p>
+<p class="section-subtitle">Nombre completo del proyecto PULSE</p>
+</div>
+</div>
+
+<div class="section-body">
+
+<p><b>Nombre completo de la funcionalidad:</b></p>
+
+<p>
+<b>Sistema Predictivo de pruebas para Vivo Group mediante Machine Learning</b>
+</p>
+
+<p>
+La funcionalidad propone desarrollar un sistema de análisis de datos capaz de utilizar
+información histórica de los datasets <b>Pulse_DB</b> para identificar
+patrones de comportamiento en las pruebas realizadas.
+</p>
+
+<p>
+A partir de este análisis se construirán modelos predictivos que permitan estimar
+el volumen futuro de pruebas médicas por clínica y modalidad. Los resultados podrán
+visualizarse mediante gráficos predictivos dentro de la plataforma Pulse.
+</p>
+
+<p>
+Actualmente Pulse ya dispone de una solución de inteligencia artificial proporcionada
+por un proveedor externo que permite realizar consultas sobre la base de datos y
+generar predicciones mediante una interfaz conversacional similar a ChatGPT.
+</p>
+
+<p>
+La funcionalidad propuesta en este proyecto no pretende sustituir esa herramienta,
+sino complementarla mediante modelos propios enfocados específicamente a la
+visualización de predicciones en gráficos operativos dentro del sistema Pulse.
+</p>
+
+</div>
+</div>
+
+
+<!-- 2 PROBLEMA -->
+
+<div class="section-card">
+
+<div class="section-header">
+<div class="section-number">2</div>
+
+<div>
+<p class="section-title">Introducción – Problema de negocio</p>
+<p class="section-subtitle">Qué quiere saber la empresa</p>
+</div>
+</div>
+
+<div class="section-body">
+
+<p><b>Contexto general</b></p>
+
+<p>
+Vivo Group genera una gran cantidad de datos relacionados con su actividad
+médica y operativa. Sin embargo, estos datos se utilizan principalmente para
+análisis descriptivos, lo que limita su capacidad para anticipar tendencias
+futuras o mejorar la planificación estratégica.
+</p>
+
+<p>
+Mediante técnicas de Machine Learning es posible analizar estos datos históricos
+para descubrir patrones de comportamiento y desarrollar modelos predictivos que
+ayuden a anticipar la demanda futura de pruebas médicas.
+</p>
+
+<p><b>Decisión de negocio</b></p>
+
+<p>
+La empresa busca aprovechar los datos disponibles en el dataset <b>Pulse_DB</b>
+para mejorar la planificación operativa y optimizar la toma de decisiones.
+</p>
+
+<ul>
+
+<li>Identificar los factores que influyen en la actividad médica.</li>
+
+<li>Predecir el volumen mensual de pruebas por clínica y modalidad.</li>
+
+<li>Detectar patrones de comportamiento en los datos históricos.</li>
+
+</ul>
+
+<p><b>Preguntas del proyecto</b></p>
+
+<ul>
+
+<li>¿Es posible predecir el volumen de pruebas futuras utilizando datos históricos?</li>
+
+<li>¿Existen patrones estacionales en la actividad médica?</li>
+
+<li>¿Qué centros o modalidades presentan mayor volumen de actividad?</li>
+
+<li>¿Cómo pueden utilizarse estos modelos para mejorar la planificación operativa?</li>
+
+</ul>
+
+</div>
+</div>
+
+
+<!-- 3 OBJETIVOS -->
+
+<div class="section-card">
+
+<div class="section-header">
+
+<div class="section-number">3</div>
+
+<div>
+<p class="section-title">Objetivos</p>
+<p class="section-subtitle">Qué se quiere conseguir</p>
+</div>
+
+</div>
+
+<div class="section-body">
+
+<p><b>Objetivo general</b></p>
+
+<p>
+Desarrollar un sistema de análisis de datos y modelos predictivos que permita
+analizar el comportamiento de las pruebas utilizando el dataset <b>Pulse_DB</b>
+de Vivo Group.
+</p>
+
+<p><b>Objetivos específicos</b></p>
+
+<ul>
+
+<li><b>Analizar la estructura del dataset</b></li>
+
+<li><b>Realizar un análisis exploratorio de datos</b></li>
+
+<li><b>Preparar los datos para Machine Learning</b></li>
+
+<li><b>Construir modelos predictivos</b> para estimar el volumen mensual de pruebas por clínica y modalidad</li>
+
+<li><b>Evaluar el rendimiento de los modelos</b></li>
+
+</ul>
+
+</div>
+</div>
+
+
+<!-- 4 DATOS -->
+
+<div class="section-card">
+
+<div class="section-header">
+
+<div class="section-number">4</div>
+
+<div>
+<p class="section-title">Fuentes de datos</p>
+<p class="section-subtitle">Dataset del proyecto</p>
+</div>
+
+</div>
+
+<div class="section-body">
+
+<p><b>Dataset principal:</b> Pulse_DB</p>
+
+<p>
+La principal fuente de información será la vista materializada
+<b>mv_forecast_general</b> del sistema <b>Pulse_DB</b>.
+</p>
+
+<p>
+Esta vista materializada contiene datos históricos agregados sobre
+la actividad médica de los centros, permitiendo trabajar directamente
+con series temporales sin necesidad de realizar procesos adicionales
+de agregación de datos.
+</p>
+
+<p>
+Esta vista contiene información histórica sobre el volumen de pruebas
+médicas realizadas en los diferentes centros del grupo.
+</p>
+
+<ul>
+
+<li>Fecha de realización de la prueba</li>
+
+<li>Centro o clínica</li>
+
+<li>Modalidad de prueba</li>
+
+<li>Número de pruebas realizadas</li>
+
+<li>Estimaciones de actividad</li>
+
+</ul>
+
+<p>
+Cada registro representa una combinación de clínica, modalidad y periodo
+temporal, lo que permite construir series temporales para analizar la
+evolución de la demanda de pruebas médicas.
+</p>
+
+</div>
+</div>
+
+
+<!-- 5 PLAN -->
+
+<div class="section-card">
+
+<div class="section-header">
+
+<div class="section-number">5</div>
+
+<div>
+<p class="section-title">Plan de Trabajo</p>
+<p class="section-subtitle">Cronograma del proyecto</p>
+</div>
+
+</div>
+
+<div class="section-body">
+
+<table class="timeline-table">
+
+<tr>
+<th>Fase</th>
+<th>01</th>
+<th>02</th>
+<th>03</th>
+<th>04</th>
+<th>05</th>
+<th>06</th>
+<th>07</th>
+<th>08</th>
+<th>09</th>
+<th>10</th>
+</tr>
+
+<tr>
+<td>Definición del proyecto</td>
+<td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Comprensión de datos</td>
+<td></td><td></td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Preparación de datos</td>
+<td></td><td></td><td></td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Modelado ML</td>
+<td></td><td></td><td></td><td></td><td></td><td>X</td><td>X</td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Evaluación</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td>X</td><td>X</td><td></td><td></td>
+</tr>
+
+<tr>
+<td>Implantación</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>X</td><td>X</td><td>X</td>
+</tr>
+
+</table>
+
+</div>
+</div>
+
+
+<!-- 6 METODOLOGIA -->
+
+<div class="section-card">
+
+<div class="section-header">
+
+<div class="section-number">6</div>
+
+<div>
+<p class="section-title">Metodología</p>
+<p class="section-subtitle">Marco CRISP-DM</p>
+</div>
+
+</div>
+
+<div class="section-body">
+
+<p>
+La metodología del proyecto se inspira en el estándar <b>CRISP-DM
+(Cross Industry Standard Process for Data Mining)</b>, un marco de trabajo
+utilizado ampliamente en proyectos de ciencia de datos y Machine Learning.
+Este enfoque permite estructurar el desarrollo del proyecto en distintas
+fases que conectan el análisis técnico con los objetivos de negocio.
+</p>
+
+<p>
+Aplicar esta metodología facilita avanzar de forma ordenada desde la
+comprensión del problema empresarial hasta la implantación de modelos
+predictivos capaces de generar valor dentro del sistema Pulse.
+</p>
+
+<p><b>1. Comprensión del negocio</b></p>
+
+<p>
+En esta fase inicial se analiza el contexto de negocio de Vivo Group y
+las necesidades operativas relacionadas con la planificación de la
+actividad médica en los distintos centros del grupo.
+</p>
+
+<p>
+El objetivo es identificar qué decisiones pueden beneficiarse de
+información predictiva. En este proyecto se plantea estimar el volumen
+futuro de pruebas médicas utilizando datos históricos con el fin de
+anticipar tendencias de demanda, mejorar la planificación de agendas
+y facilitar la asignación de recursos en los centros.
+</p>
+
+<p><b>2. Comprensión de los datos</b></p>
+<p>
+En esta fase se analizan las fuentes de información disponibles dentro del
+ecosistema de datos de Pulse con el objetivo de comprender la estructura
+de los datos y evaluar su idoneidad para el desarrollo de modelos
+predictivos.
+</p>
+
+<p>
+Este proceso incluye la revisión de los datasets disponibles, la
+identificación de las variables relevantes para el análisis y la
+evaluación general de la calidad de los datos.
+</p>
+
+<p><b>Análisis preliminar del dataset</b></p>
+
+<p>
+Como parte de esta fase se ha realizado un análisis preliminar de la vista
+<b>mv_forecast_general</b> del sistema <b>Pulse_DB</b>, que contiene información
+histórica sobre la actividad médica de los centros.
+</p>
+
+<p>
+El dataset analizado dispone de aproximadamente <b>7.674 registros</b> con un
+histórico comprendido entre <b>enero de 2023 y diciembre de 2026</b>.
+Cada registro representa una combinación de clínica,
+modalidad de prueba y periodo temporal, lo que permite
+construir series temporales de actividad para cada centro y modalidad.
+</p>
+
+<p>
+Durante este análisis preliminar se han evaluado aspectos como:
+</p>
+
+<ul>
+
+<li>El rango temporal disponible de datos históricos.</li>
+
+<li>El número total de registros disponibles.</li>
+
+<li>Las variables presentes en el dataset (centro, modalidad, fecha, número de pruebas, etc.).</li>
+
+<li>La calidad de los datos y la presencia de valores faltantes.</li>
+
+</ul>
+
+<p>
+Los resultados de este análisis indican que el dataset dispone de
+<b>suficiente volumen de datos históricos</b> para entrenar modelos
+predictivos capaces de identificar patrones temporales, tendencias
+y posibles comportamientos estacionales en la actividad médica.
+</p>
+
+<p><b>3. Preparación de los datos</b></p>
+
+<p>
+Una vez comprendida la estructura de los datos, se procede a su
+preparación para el modelado.
+</p>
+
+<p>
+Esta etapa incluye tareas como:
+</p>
+
+<ul>
+
+<li>Limpieza y normalización de los datos.</li>
+
+<li>Tratamiento de valores faltantes o inconsistentes.</li>
+
+<li>Transformación de variables categóricas como centro o modalidad.</li>
+
+<li>Creación de variables temporales relevantes (mes, año, estacionalidad).</li>
+
+</ul>
+
+<p>
+El objetivo de esta fase es construir un dataset limpio y consistente
+que permita entrenar modelos de Machine Learning de forma fiable.
+</p>
+
+<p><b>4. Modelado</b></p>
+
+<p>
+En esta etapa se entrenarán distintos modelos de Machine Learning
+utilizando librerías como <b>TensorFlow</b>, <b>Scikit-learn</b> y
+herramientas de análisis de datos como <b>Pandas</b>.
+</p>
+
+<p>
+El objetivo del modelado será generar estimaciones del volumen esperado
+de pruebas médicas en periodos futuros utilizando patrones observados
+en los datos históricos.
+</p>
+
+<p>
+Los modelos analizarán la evolución temporal del volumen de pruebas
+para detectar tendencias, patrones estacionales y variaciones entre
+centros y modalidades.
+</p>
+
+<p>
+Inicialmente se evaluarán diferentes enfoques de modelado con el fin
+de seleccionar aquel que ofrezca el mejor equilibrio entre precisión,
+interpretabilidad y facilidad de integración dentro del sistema Pulse.
+</p>
+
+<p><b>5. Evaluación</b></p>
+
+<p>
+Una vez entrenados los modelos, se evaluará su rendimiento utilizando
+métricas de error adecuadas para problemas de predicción temporal.
+</p>
+
+<p>
+Además de las métricas técnicas, se analizará la utilidad práctica
+de las predicciones desde el punto de vista del negocio, verificando
+si los resultados pueden ayudar realmente a mejorar la planificación
+operativa de los centros.
+</p>
+
+<p>
+Solo aquellos modelos que demuestren una mejora real respecto a
+métodos simples de estimación serán considerados candidatos para
+su implantación en el sistema.
+</p>
+
+<p><b>6. Implantación</b></p>
+
+<p>
+Una vez validado el modelo, se planteará su integración dentro del
+ecosistema tecnológico de Pulse.
+</p>
+
+<p>
+El modelo se expondrá como un servicio interno accesible desde el
+backend de Pulse desarrollado en <b>Quarkus</b>. Este servicio permitirá
+generar predicciones bajo demanda mediante un endpoint de consulta.
+</p>
+
+<p>
+Las predicciones generadas podrán representarse visualmente dentro
+de la interfaz de Pulse mediante gráficos interactivos desarrollados
+en <b>Angular</b>, permitiendo a los usuarios explorar tendencias
+futuras de forma intuitiva.
+</p>
+
+<p>
+Las predicciones generadas se almacenarán en una tabla específica dentro
+de la base de datos <b>Pulse_DB</b>. Esta tabla contendrá las estimaciones
+de actividad futura por clínica, modalidad y periodo temporal, lo que
+permitirá que el backend de Pulse consulte los resultados de forma
+eficiente y los represente en gráficos dentro de la plataforma.
+</p>
+
+<p>
+De esta forma el sistema puede mostrar los resultados de forma rápida
+y consistente dentro de la plataforma Pulse, evitando recalcular el
+modelo en cada petición realizada por los usuarios.
+</p>
+
+<p><b>Infraestructura necesaria</b></p>
+
+<p>
+La integración del modelo predictivo dentro de Pulse puede realizarse
+mediante un pequeño servicio de predicción desplegado como microservicio
+independiente.
+</p>
+
+<p>
+La arquitectura general del sistema sería la siguiente:
+</p>
+
+<ul>
+
+<li><b>Frontend:</b> Angular, encargado de mostrar los gráficos predictivos.</li>
+
+<li><b>Backend principal:</b> Quarkus, responsable de la lógica de negocio y acceso a la base de datos.</li>
+
+<li><b>Servicio de predicción:</b> microservicio desarrollado en Python que ejecuta el modelo de Machine Learning.</li>
+
+<li><b>Base de datos:</b> PostgreSQL utilizada por el sistema Pulse.</li>
+
+</ul>
+
+<p>
+El backend de Pulse realizará llamadas al servicio de predicción cuando
+sea necesario generar estimaciones de volumen futuro de pruebas.
+Los resultados se devolverán en formato estructurado y podrán
+representarse visualmente mediante gráficos dentro de la interfaz
+de usuario.
+</p>
+
+<p><b>Requisitos de infraestructura</b></p>
+
+<p>
+Para este tipo de modelos de predicción no es necesario hardware
+especializado. El modelo se ejecuta únicamente en modo inferencia,
+por lo que puede desplegarse en un servidor estándar dentro de la
+infraestructura existente.
+</p>
+
+<ul>
+
+<li><b>CPU:</b> 2-4 núcleos</li>
+
+<li><b>Memoria RAM:</b> 4-8 GB</li>
+
+<li><b>Almacenamiento:</b> 10-20 GB</li>
+
+<li><b>GPU:</b> no necesaria</li>
+
+</ul>
+
+<p>
+El servicio puede desplegarse como un contenedor adicional utilizando
+tecnologías como <b>Docker</b>, integrándose con la infraestructura
+actual de Pulse sin requerir cambios significativos en la arquitectura
+existente.
+</p>
+
+<p>
+<b>Mantenimiento del modelo</b>
+
+El modelo predictivo se reentrenará periódicamente utilizando
+los nuevos datos históricos disponibles en el sistema Pulse.
+
+Este proceso se realizará mediante un pipeline automático que
+entrenará nuevas versiones del modelo y evaluará su rendimiento
+antes de actualizar el modelo utilizado en producción.
+
+De esta forma se garantiza que el sistema predictivo se adapta
+a cambios en los patrones de actividad médica a lo largo del tiempo.
+
+En caso de degradación significativa del modelo, el sistema podrá
+utilizar métodos de estimación simples basados en datos históricos
+como mecanismo de fallback, garantizando así la continuidad del
+servicio de predicción.
+</p>
+</div>
+</div>
+
+
+<!-- 7 TECNOLOGIA -->
+
+<div class="section-card">
+
+<div class="section-header">
+
+<div class="section-number">7</div>
+
+<div>
+<p class="section-title">Tecnología y herramientas</p>
+<p class="section-subtitle">Ecosistema técnico</p>
+</div>
+
+</div>
+
+<div class="section-body">
+
+<!-- Fila 1 -->
+
+<div class="tech-grid">
+
+<div class="tech-card">
+
+<h4 class="tech-card-title">Gestión de datos</h4>
+
+<p class="tech-card-text">
+La información utilizada en el proyecto proviene principalmente del
+sistema Pulse y se almacena en bases de datos relacionales. Estos datos
+contienen información histórica sobre la actividad médica realizada en
+los distintos centros del grupo.
+</p>
+
+<ul class="tech-list">
+
+<li><b>Base de datos:</b> PostgreSQL.</li>
+
+<li>Extracción de datos desde el dataset <b>Pulse_DB</b>.</li>
+
+<li>Uso de datos estructurados para análisis y entrenamiento de modelos.</li>
+
+</ul>
+
+</div>
+
+<div class="tech-card">
+
+<h4 class="tech-card-title">Lenguajes y tecnologías</h4>
+
+<p class="tech-card-text">
+El desarrollo del sistema combina tecnologías ya presentes en Pulse con
+herramientas de ciencia de datos necesarias para construir el modelo
+predictivo.
+</p>
+
+<div class="tech-icons-row">
+
+<div class="tech-icon-box">
+<span class="tech-icon-text">JAVA</span>
+<span class="tech-icon-label">Backend</span>
+</div>
+
+<div class="tech-icon-box">
+<span class="tech-icon-text">Python</span>
+<span class="tech-icon-label">ML</span>
+</div>
+
+<div class="tech-icon-box">
+<span class="tech-icon-text">Angular</span>
+<span class="tech-icon-label">Frontend</span>
+</div>
+
+<div class="tech-icon-box">
+<span class="tech-icon-text">HTML</span>
+<span class="tech-icon-label">UI</span>
+</div>
+
+<div class="tech-icon-box">
+<span class="tech-icon-text">CSS</span>
+<span class="tech-icon-label">UI</span>
+</div>
+
+</div>
+
+<ul class="tech-list">
+
+<li><b>Lenguajes:</b> Java y Python.</li>
+
+<li><b>Framework backend:</b> Quarkus.</li>
+
+<li><b>Frontend:</b> Angular.</li>
+
+<li><b>Machine Learning:</b> TensorFlow, Scikit-learn, Pandas.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- Fila 2 -->
+
+<div class="tech-grid tech-grid-bottom">
+
+<div class="tech-card">
+
+<h4 class="tech-card-title">Plataforma de desarrollo</h4>
+
+<p class="tech-card-text">
+El desarrollo y experimentación de los modelos de Machine Learning se
+realizará en entornos de análisis de datos, mientras que la integración
+con el sistema Pulse se desarrollará dentro del entorno habitual del
+equipo de desarrollo.
+</p>
+
+<ul class="tech-list">
+
+<li><b>Google Colab</b> para experimentación y pruebas iniciales del modelo.</li>
+
+<li><b>IntelliJ IDEA</b> para desarrollo backend e integración con Pulse.</li>
+
+</ul>
+
+</div>
+
+<div class="tech-card">
+
+<h4 class="tech-card-title">Control de versiones</h4>
+
+<p class="tech-card-text">
+El código del proyecto y la documentación se gestionarán mediante un
+sistema de control de versiones que permite mantener un historial de
+cambios y facilitar el trabajo colaborativo del equipo.
+</p>
+
+<ul class="tech-list">
+
+<li><b>Git</b> como sistema de control de versiones.</li>
+
+<li><b>GitHub</b> como repositorio central del proyecto.</li>
+
+<li><b>Repositorio:</b> https://github.com/Vivo-IT/pulse</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- 8 REFERENCIAS -->
+
+<div class="section-card">
+
+<div class="section-header">
+
+<div class="section-number">8</div>
+
+<div>
+<p class="section-title">Referencias</p>
+<p class="section-subtitle">Fuentes del proyecto</p>
+</div>
+
+</div>
+
+<div class="section-body">
+
+<ul>
+
+<li>Documentación oficial de Python</li>
+
+<li>Documentación de TensorFlow</li>
+
+<li>Scikit-learn Machine Learning Library</li>
+
+<li>Metodología CRISP-DM</li>
+
+<li>Dataset Pulse_DB de Vivo Group</li>
+
+</ul>
+
+</div>
+</div>
+
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
